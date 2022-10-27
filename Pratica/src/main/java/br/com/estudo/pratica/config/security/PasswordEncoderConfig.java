@@ -1,4 +1,4 @@
-package br.com.estudo.pratica.config;
+package br.com.estudo.pratica.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

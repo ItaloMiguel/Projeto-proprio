@@ -25,6 +25,8 @@ public class UserModel implements Serializable, UserDetails {
     private String username;
     @Column(nullable = false)
     private String password;
+    @Column(unique = true)
+    private String email;
 
 
     @Override
