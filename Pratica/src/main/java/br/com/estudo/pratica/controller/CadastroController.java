@@ -4,10 +4,11 @@ import br.com.estudo.pratica.model.UserModel;
 import br.com.estudo.pratica.model.dto.UserModelDTO;
 import br.com.estudo.pratica.service.CadastroService;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/home")
@@ -28,7 +29,7 @@ public class CadastroController {
     }
 
     @GetMapping("/buscar/{id}")
-    public ResponseEntity<UserModelDTO> pergarInformacoesDeLogin(@PathVariable Long id) {
+    public ResponseEntity<UserModelDTO> pergarInformacoesDeLogin(@PathVariable UUID id) {
         UserModel userModel = cadastroService.pegarInfoDeUserPorId(id);
         UserModelDTO userModelDTO = transformaEmDTO(userModel);
         return ResponseEntity.ok().body(userModelDTO);

@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class CadastroControllerImpl implements CadastroService {
@@ -33,7 +34,7 @@ public class CadastroControllerImpl implements CadastroService {
     }
 
     @Override
-    public UserModel pegarInfoDeUserPorId(Long id) {
+    public UserModel pegarInfoDeUserPorId(UUID id) {
         return userModelRepository.findById(id).orElseThrow(() -> new MyObjectNotFoundException(OBJETO_NAO_ENCONTRADO));
     }
 

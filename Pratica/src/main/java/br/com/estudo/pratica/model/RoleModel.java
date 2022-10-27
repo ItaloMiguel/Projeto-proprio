@@ -20,7 +20,8 @@ public class RoleModel implements Serializable, GrantedAuthority {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private UUID id = UUID.randomUUID();
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID id;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, unique = true)
     private RoleName roleName;
