@@ -6,6 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.UUID;
 
 @Entity
 @Table(name = "TB_ROLE")
@@ -19,8 +20,7 @@ public class RoleModel implements Serializable, GrantedAuthority {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id = UUID.randomUUID();
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, unique = true)
     private RoleName roleName;

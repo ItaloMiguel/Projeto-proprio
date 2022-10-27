@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 
 @Entity
@@ -22,8 +23,7 @@ public class UserModel implements Serializable, UserDetails {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private UUID id = UUID.randomUUID();
     @Column(nullable = false, unique = true)
     private String username;
     @Column(nullable = false)
