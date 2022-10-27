@@ -35,6 +35,13 @@ public class CadastroController {
         return ResponseEntity.ok().body(userModelDTO);
     }
 
+    @PutMapping("/atualizar")
+    public ResponseEntity<UserModelDTO> atualizarPerfil(@RequestBody UserModel userModel) {
+        UserModel newUserModel = cadastroService.atualizarPerfil(userModel);
+        UserModelDTO userModelDTO = transformaEmDTO(newUserModel);
+        return ResponseEntity.status(HttpStatus.UPGRADE_REQUIRED).body(userModelDTO);
+    }
+
 
     private UserModelDTO transformaEmDTO(UserModel userModel) {
         UserModelDTO userModelDTO = modelMapper.map(userModel, UserModelDTO.class);

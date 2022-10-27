@@ -8,4 +8,6 @@ public interface CadastroService {
     UserModel registrarNovoUser(UserModel userModel);
 
     UserModel pegarInfoDeUserPorId(UUID id);
+
+    UserModel atualizarPerfil(UserModel userModel);
 }

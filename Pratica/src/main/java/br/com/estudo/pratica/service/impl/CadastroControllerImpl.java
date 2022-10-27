@@ -38,6 +38,12 @@ public class CadastroControllerImpl implements CadastroService {
         return userModelRepository.findById(id).orElseThrow(() -> new MyObjectNotFoundException(OBJETO_NAO_ENCONTRADO));
     }
 
+    @Override
+    public UserModel atualizarPerfil(UserModel userModel) {
+        registrarNovoUser(userModel);
+        return userModel;
+    }
+
     private UserModel criptografarPassword(UserModel userModel) {
         String passwordCriptografado = passwordEncoder.encode(userModel.getPassword());
         userModel.setPassword(passwordCriptografado);

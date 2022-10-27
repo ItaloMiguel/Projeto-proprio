@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.context.annotation.Bean;
 
+import java.util.UUID;
+
 
 @Getter
 @Setter
@@ -13,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 public class UserModelDTO {
 
     @JsonIgnore
-    private Long id;
+    private UUID id;
     private String username;
     @JsonIgnore
     private String password;

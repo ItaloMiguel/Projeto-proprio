@@ -39,6 +39,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests()
                 .antMatchers(HttpMethod.GET, "/home/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/home/cadastrar").permitAll()
+                .antMatchers(HttpMethod.PUT, "/home/atualizar").permitAll()
                 .antMatchers(HttpMethod.DELETE, "/home/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/hello/**").permitAll()
                 .anyRequest().authenticated()
