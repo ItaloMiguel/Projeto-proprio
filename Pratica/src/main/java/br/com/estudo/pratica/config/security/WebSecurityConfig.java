@@ -42,6 +42,7 @@ public class WebSecurityConfig {
                 .antMatchers(HttpMethod.PUT, "/home/atualizar").permitAll()
                 .antMatchers(HttpMethod.DELETE, "/home/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/hello/**").permitAll()
+                .antMatchers("/roles/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable().build();
