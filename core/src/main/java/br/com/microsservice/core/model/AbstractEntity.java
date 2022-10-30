@@ -1,4 +1,4 @@
-package br.com.microsservice.course.endpoint.model;
+package br.com.microsservice.core.model;
 
 import java.io.Serializable;
 

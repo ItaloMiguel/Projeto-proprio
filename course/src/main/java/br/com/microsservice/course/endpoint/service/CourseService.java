@@ -1,11 +1,10 @@
 package br.com.microsservice.course.endpoint.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import br.com.microsservice.core.model.Course;
+import br.com.microsservice.core.repository.CourseRepository;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.com.microsservice.course.endpoint.model.Course;
-import br.com.microsservice.course.endpoint.repository.CourseRepository;
 
 @Service
 public class CourseService {
@@ -16,7 +15,7 @@ public class CourseService {
 		this.cursoRepository = cursoRepository;
 	}
 
-	public Iterable<Course> list(Pageable pageable) {		
+	public Iterable<Course> list(Pageable pageable) {
 		return cursoRepository.findAll(pageable);
 	}
 	
