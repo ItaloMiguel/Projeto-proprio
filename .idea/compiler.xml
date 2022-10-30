@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="course" />
         <module name="core" />
+        <module name="discovery" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="core" target="1.8" />
       <module name="course" target="11" />
+      <module name="discovery" target="11" />
       <module name="Projeto-proprio" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -22,6 +24,7 @@
       <module name="Projeto-proprio" options="" />
       <module name="core" options="-parameters" />
       <module name="course" options="-parameters" />
+      <module name="discovery" options="-parameters" />
     </option>
   </component>
 </project>
