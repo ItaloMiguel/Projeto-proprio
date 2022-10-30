@@ -1,4 +1,7 @@
-# Livro utilizado
-Spring Boot: Microsserviços na prática
+# Pq o código está escrito em ingles?
+Bom, talvez seja apenas uma frescura mesmo... Mas o maior motivo é que passo a maior parte do dia talvez programando ou consumindo conteúdo sobre, então tento implmentar tudo em ingles para ter uma evolução melhor. 
 
-recomendo bastante, se você já tiver Kindleunlimited vai sair de graça, mas se não tiver vale apena pagar 2 reais para ter acesso. Bom estudo =)
+# Proposito do projeto
+Não tem um proposito alem de estudos, eu faço ele a um bom tempo, mas sempre excluindo e criando um novo quando algum código começasse a dar problema, então pretendo posta todo dia um commit aqui, praticando boas práticas e adicionando coisas afins de estudo mesmo.
+
+
